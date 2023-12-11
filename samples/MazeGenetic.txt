@@ -1,0 +1,133 @@
+# Genetic Algorithm Framework
+# Copyright (c) 2001, 2002, 2003 by Cynthia Zujko-Miller
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+# 
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+# 
+# for more information, contact the author: cynzu@yahoo.com
+
+
+# Valid values from chromType are: LINEAR, LEAF_TREE, and NODE_TREE.
+# A LINEAR chromosome has all of its genes on the same plane, in a sequence.
+# A LEAF_TREE arranges its genes in a tree shape with all of the gene values
+#   at the leaves of the tree and no values at the inner nodes.  
+# A NODE_TREE arranges its genes in a tree shape with the gene values at all
+#   of the nodes including the root and the leaves.
+chromType = LINEAR
+
+# The alphabetSize indicates the number of values which could potentially
+# be assigned to each gene.  If the alphabet size is 2, then the Chromosomes 
+# will be binary, having only ones or zeros for values.  The valid values
+# for alphabetSize are 2 through 32,000.
+alphabetSize = 4
+
+# The minChromLength is the minimum length of a chromosome.  
+minChromLength = 4
+
+# The maxChromLength is the maximum length of a chromosome.
+# To created fixed-length chromosomes, the minChromLength
+# and maxChromLength should be set to the same values.
+maxChromLength = 50
+
+# populationSize indicates the number of Chromosomes which will be
+# produced during each generation.
+populationSize = 20
+
+# mutationsPerGen indicates the number of mutations which occur
+# when producing a child generation from a parent generation.
+mutationsPerGen = 50
+
+# crossoversPerGen indicates the number of crossovers which occur
+# when producing a child generation from a parent generation.
+crossoversPerGen = 6
+
+# numToReplicate indicates the top-scoring chromosomes from the
+# parent generation to replicate in the child generation before
+# mutations and crossovers are done.
+numToReplicate = 4
+
+# numOfTimes indicates number of times that each of the top-scoring
+# chromosomes from the parent generation should be replicated in the
+# child generation before mutations and crossovers are done.
+numOfTimes = 2
+
+# numOfGenerations indicates the maximum number of generations to
+# run.  If "doStopAtScore" is set to true, then the actual number
+# of generations produced may be less than numOfGenerations if
+# a "stopAtScore" value is achieved early on.
+numOfGenerations = 50
+
+# If doStopAtScore is set to true, then the evolution process will
+# be halted as soon as the "stopAtScore" value is reached. If it is
+# set to false, then the "stopAtScore" value is ignored.
+doStopAtScore = false
+stopAtScore = 100
+
+# If duplicates are allowed then the Chromosome represents a "bag"
+# rather than a set in that its genes may contain duplicate values, 
+# for ex: {a, c, b, a, b, c}.  If duplicates are not allowed, then
+# the Chromosome represents a "set" in that its genes may not contain
+# any duplicate values, for ex: {a, b, c, d, e}.
+allowDuplicates = true
+
+# fitnessTester should point to the fully qualified class name
+# which implements the zujkomiller.genetic.FitnessTester interface.
+# This class will be used to provide fiteness scores to each
+# Chromosome in every generation.
+fitnessTester = zujkomiller.maze.MazeTester
+
+# observers should point to either the value "none" or to a list of
+# the fully qualified class names of classes which implement the 
+# zujkomiller.genetic.EvolutionObserver interface. The list should
+# be separated by cammas.  These classes will be informed every time
+# a new generation is created.  They can be used to track progress
+# or to interpret results either as each generation is produced or
+# at the end of the evolution process.
+observers = zujkomiller.maze.MazeTester
+
+# Give the file name where the results will be printed.
+# This file must already exist before the program is run.
+# It will be over-written each time the program is run.
+outputFile = ../../maze/output/difficult.txt
+
+# If outputResultOnly is set to true, then only the final
+# generation and top scorers will be printed to the outputFile,
+# and the value for outputGenerations (below) will be ignored.
+outputResultOnly = false
+
+# If outputResultOnly (above) is set to false, then
+# every Nth generation will be printed to the outputFile
+# where N = the value specified by outputGenerations
+# (ex: if outputGenerations = 50 then every 50th
+# generation will be printed to the outputFile).
+# The final generation and top scorers will always
+# be printed to the outputFile, regardless of the value
+# of outputGenerations.
+outputGenerations = 5
+
+# If showProgressOnScreen is set to true then
+# the number of generations produced and the top
+# score created so far will be printed to the screen
+# everytime a generation is created and tested for fitness.
+showProgressOnScreen = true
+
+#
+# The following properties are specific to the Maze application:
+#
+
+# The name of the maze to be run:
+maze=difficult
+
+# Number of bonus points for reaching the destination
+bonus=100
