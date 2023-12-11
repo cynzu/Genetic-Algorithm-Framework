@@ -1,10 +1,8 @@
 # Genetic-Algorithm-Framework
 This framework which allows a programmer to use all the wonders of genetic algorithms simply by providing a fitness tester. It was written in 2001-2003 in java.
 
-<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>Genetic Algorithms</title>
 <link type="text/css" href="../examples.css" rel="stylesheet">
 </head>
 
