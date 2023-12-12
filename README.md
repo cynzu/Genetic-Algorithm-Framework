@@ -29,6 +29,7 @@ The Genetic Algorithm Framework in the zujkomiller.genetic package contains clas
 <h4>Types of Chromosomes</h4>
 <p>
 The most basic type of Chromosome is linear, represented by a string of characters. For some problems, it is appropriate to tell the framework to create Chromosomes which are sets, having no duplicate genes.  For other problems, it would be appropriate to have a "bag" which may contain duplicate genes. In some problems, the Chromosomes should always be of a fixed length, but for others the Chromosomes in a generation may be of varying length. For this reason, the Genetic Algorithm Framework is capable of performing operations on the following types of Chromosomes:
+</p>
 <ul>
     <li>
         Fixed Set Chromosomes: duplicate genes are not allowed, and Chromosomes are always of a given length 
