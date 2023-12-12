@@ -52,7 +52,7 @@ The most basic type of Chromosome is linear, represented by a string of characte
         ex: {a, b, b, d, a} and {c, a} are two legal Variable Bag Chromosomes
     </li>
 </ul>
-</p>
+
 
 <h4>Classes in the Genetic Algorithm Framework</h4>
 Below are descriptions of some of the central classes in the framework.  For complete descriptions of all the classes, please see the <a href="./doc/index.html" target="_blank">Developers' Documentation</a> and the <a href="./images/classDiagram.jpg" target="_blank">Class Diagram</a>.
