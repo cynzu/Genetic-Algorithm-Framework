@@ -35,7 +35,6 @@ The most basic type of Chromosome is linear, represented by a string of characte
         Fixed Set Chromosomes: duplicate genes are not allowed, and Chromosomes are always of a given length 
         <br>
         ex: {a, b, c, d, e} and {b, c, d, a, e} are two legal Fixed Set Chromosomes
-
     </li>
     <li>
         Fixed Bag Chromosomes: duplicate genes are allowed, and Chromosomes are always of a given length
